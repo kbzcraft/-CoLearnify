@@ -9,6 +9,7 @@ CoLearnify:  Collaborative Learning Platform that Enhances Education
 - Auto Grading
 - Comprehensive Analytics
 - Gamified Experience
+- Plugins
 
 ## To-Do Lists
 
