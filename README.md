@@ -18,6 +18,7 @@ CoLearnify:  Collaborative Learning Platform that Enhances Education
 - [ ] Implement user authentication
 - [ ] Set up the database schema
 - [ ] User profile
+- [ ] User Setting
 - [ ] Develop the real time chat feature
 - [ ] Discussion Boards
 - [ ] Integrate video conferencing with webRTC
