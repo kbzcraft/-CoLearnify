@@ -4,7 +4,6 @@ CoLearnify:  Collaborative Learning Platform that Enhances Education
 ## Features
 
 - Collaborative Learning
-- Advance Security
 - Personalized Learning Path
 - Interactive Tools
 - Auto Grading
