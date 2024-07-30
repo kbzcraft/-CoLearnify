@@ -31,12 +31,15 @@ CoLearnify:  Collaborative Learning Platform that Enhances Education
 - [ ] Analytical Dashboard
 - [ ] Real time document editing and brainstrom board
 - [ ] Leaderboards and badges for completed coursess for completed courses and assignment
+- [ ] Payment Integration (visa / net-banking / esewa / IME pay)
+- [ ] Quiz generation for each class / different for each user according to their progress level and previous results.
+- [ ] Auto grading system.
 - [ ] Create a responsive UI
 - [ ] Set up CI/CD pipelines
 - [ ] Write documentation for developers
 - [ ] Conduct user testing
 - [ ] Optimize performance
-- [ ] Lunce the beta version (0.1.0)
+- [ ] Launch the beta version (0.1.0)
 
 ## License
 This project is licensed under the [Custom Contribution License (CCL)](LICENSE)
