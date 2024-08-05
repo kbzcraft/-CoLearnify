@@ -23,6 +23,7 @@ CoLearnify:  Collaborative Learning Platform that Enhances Education
 - [ ] (1080/720/480 options to switch for user)
 - [ ] Bidirectional Brainstorming board
 - [ ] Realtime pooling (voting)
+- [ ] Payment Integrations
 - [ ] Launch beta version 0.1.0
 ### V 0.1.1
 - Class management/setting
@@ -61,7 +62,6 @@ CoLearnify:  Collaborative Learning Platform that Enhances Education
 - [ ] Personal Analytical Dashboard
 - [ ] Personalized Quiz generation with spaced repetitation
 - [ ] Personalized roadmap / recommandations
-- [ ] Payment Integrations
 - [ ] Optimize Performance (if any)
 ### V 1.1.0
 - [ ] PWA
