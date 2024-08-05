@@ -20,6 +20,7 @@ CoLearnify:  Collaborative Learning Platform that Enhances Education
 - [ ] Profile Setting
 - [ ] Create Class (Public / Private)
 - [ ] Streaming (Screen share + webcam + voice)
+- [ ] (180/720/480 options to switch for user)
 - [ ] Bidirectional Brainstorming board
 - [ ] Realtime pooling (voting)
 - [ ] Launch beta version 0.1.0
