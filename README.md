@@ -4,7 +4,7 @@ CoLearnify:  Collaborative Learning Platform that Enhances Education
 ## Features
 - Streaming Class
 - Video Conferencing
-- Brainstorming Boarding (Bidirectional)
+- Brainstorming Canvas (Bidirectional)
 - Live Pooling/ voting
 - Advance Text editor
 - (Class and canvas recorder)
