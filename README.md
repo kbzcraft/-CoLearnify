@@ -2,18 +2,20 @@
 CoLearnify:  Collaborative Learning Platform that Enhances Education
 
 ## Features
-
-- Collaborative Learning
-- Personalized Learning Path
-- Interactive Tools
-- Normal & Interactive notes
-- Auto Grading
-- Comprehensive Analytics
-- Gamified Experience
-- Customised navigation
-- Plugins
+- Streaming Class
+- Video Conferencing
+- Brainstorming Boarding (Bidirectional)
+- Live Pooling/ voting
+- Advance Text editor
+- (Class and canvas recorder)
+- Notes Management
+- Assignment Management
+- Customized Navigation
+- Custom Plugins
+- Analytical Dashboard
+- Personalized Recomandation System
+- Personalized Quiz generator
 - PWA
-
 ## To-Do Lists
 ### V 0.1.0
 - [ ] User Auth
