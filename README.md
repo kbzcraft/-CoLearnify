@@ -15,32 +15,55 @@ CoLearnify:  Collaborative Learning Platform that Enhances Education
 - PWA
 
 ## To-Do Lists
-
-- [ ] Implement user authentication
-- [ ] Set up the database schema
-- [ ] User profile
-- [ ] User Setting
-- [ ] Develop the real time chat feature
-- [ ] Discussion Boards
-- [ ] Integrate video conferencing with webRTC
-- [ ] Role-based access control
-- [ ] Class / session scheduling
-- [ ] Notes management system
-- [ ] Assignment management system
-- [ ] Notification system
-- [ ] Search functionality
-- [ ] Analytical Dashboard
-- [ ] Real time document editing and brainstrom board
-- [ ] Leaderboards and badges for completed coursess for completed courses and assignment
-- [ ] Payment Integration (visa / net-banking / esewa / IME pay)
-- [ ] Quiz generation for each class / different for each user according to their progress level and previous results.
-- [ ] Auto grading system.
-- [ ] Create a responsive UI
-- [ ] Set up CI/CD pipelines
-- [ ] Write documentation for developers
-- [ ] Conduct user testing
-- [ ] Optimize performance
-- [ ] Launch the beta version (0.1.0)
+### V 0.1.0
+- [ ] User Auth
+- [ ] Profile Setting
+- [ ] Create Class (Public / Private)
+- [ ] Streaming (Screen share + webcam + voice)
+- [ ] Bidirectional Brainstorming board
+- [ ] Realtime pooling (voting)
+- [ ] Launch beta version 0.1.0
+### V 0.1.1
+- Class management/setting
+- [ ] CURD
+- [ ] Scheduling class/session
+- [ ] Role based control / access
+### V 0.1.2
+- Notes management system
+- [ ] Interactive note editor
+      - Text editor
+      - canvas
+      - drag & drop / buttons (list , dropdown, header , etc)
+      - plugin (vim)
+### V 0.1.3
+- Assignment Management
+- [ ] Class Assignment ( creation + submission )
+- [ ] Answer Checker (default / plugins)
+  - [ ] Auto Grading
+### V 0.1.4
+- [ ] Video Conferencing (p-2 / p-m)
+### V 0.1.5
+- [ ] Plugin Management System
+### V 0.1.6
+- [ ] User Preferences setting
+- [ ] Class Preferences setting
+### V 0.1.7
+- [ ] Search Functionality
+### V 0.1.8
+- [ ] Notification Functionality
+- [ ] Notification Settings
+### V 0.1.9
+- [ ] Customized Navigation Setting
+### V 1.0
+- [ ] Leaderboard and badges
+- [ ] Class Analytical Dashboard
+- [ ] Personal Analytical Dashboard
+- [ ] Personalized Quiz generation with spaced repetitation
+- [ ] Personalized roadmap / recommandations
+- [ ] Payment Integrations
+- [ ] Optimize Performance (if any)
+### V 1.1.0
+- [ ] PWA
 
 ## License
 This project is licensed under the [Custom Contribution License (CCL)](LICENSE)
