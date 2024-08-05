@@ -68,6 +68,11 @@ CoLearnify:  Collaborative Learning Platform that Enhances Education
 ### V 1.1.0
 - [ ] PWA
 
+## Design Guidelines
+Default Color Scheme: Catppuccin (Mocha)
+[Figma](https://www.figma.com/design/leL0uwL1XHhpqD1iDu9RUK/Co-Learnify?node-id=0-1&t=CopZ1TlU7s7r0pl3-1)
+
+
 ## License
 This project is licensed under the [Custom Contribution License (CCL)](LICENSE)
 
