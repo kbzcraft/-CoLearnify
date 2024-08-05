@@ -12,6 +12,7 @@ CoLearnify:  Collaborative Learning Platform that Enhances Education
 - Gamified Experience
 - Customised navigation
 - Plugins
+- PWA
 
 ## To-Do Lists
 
