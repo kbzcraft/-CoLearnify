@@ -28,6 +28,7 @@ const OTP = () => {
           {inputRef.map((ref, i) => (
             <input
               required
+                key={i}
               ref={ref}
               onChange={handleChange(i + 1)}
               type="number"

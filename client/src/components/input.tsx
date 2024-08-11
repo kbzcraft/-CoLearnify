@@ -21,7 +21,7 @@ const Input: React.FC<InputProps> = ({
   return (
     <label
       style={{ borderRadius: radius }}
-      className={`flex flex-col border border-text relative min-h-12 focus-within:border-blue`}
+      className={`flex flex-col border border-text relative min-h-12 focus-within:border-blue text-text`}
     >
       <input
         onChange={handelChange}

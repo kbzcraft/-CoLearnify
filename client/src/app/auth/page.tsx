@@ -6,7 +6,7 @@ import CoLearnify from "@/../public/logo";
 
 const AuthPage = () => {
   return (
-    <main className="flex flex-col sm:flex-row  items-center justify-center min-h-[100vh]">
+    <main className="px-5 sm:px-1 flex flex-col sm:flex-row  items-center justify-center min-h-[100vh]">
       <section className="w-full flex-col flex items-center">
         <div className="max-w-lg sm:max-w-full sm:w-fit w-full">
           <CoLearnify />

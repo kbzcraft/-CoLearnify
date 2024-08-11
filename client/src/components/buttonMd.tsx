@@ -3,17 +3,22 @@ interface btnProps {
   value?: string;
   icon?: ReactElement;
   classname?: string;
+  fn?: React.MouseEventHandler<HTMLButtonElement>;
 }
 const ButtonMd: React.FC<btnProps> = ({
   icon,
   value = "Create account",
   classname,
+  fn = () => {
+    console.log("hello wolf");
+  },
 }) => {
   classname =
     " flex border border-blue rounded-2xl p-2 w-full justify-center gap-1 text-text " +
     classname;
+
   return (
-    <button className={classname}>
+    <button onClick={fn} className={classname}>
       <i>{icon}</i>
       <p>{value}</p>
     </button>

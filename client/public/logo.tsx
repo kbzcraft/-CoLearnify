@@ -1,7 +1,13 @@
-const CoLearnify = () => {
+interface classname {
+  classname?: string;
+}
+
+const CoLearnify: React.FC<classname> = ({
+  classname = "max-w-14 h-28 sm:max-w-52 sm:h-96",
+}) => {
   return (
     <svg
-      className="max-w-14 h-28 sm:max-w-52 sm:h-96"
+      className={classname}
       viewBox="0 0 317 569"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

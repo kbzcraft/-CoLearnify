@@ -52,7 +52,7 @@ const DobSelectList = ({ year, month, setYear, setMonth, setDay }: YMD) => {
     validateDays(year, month);
   }, [year, month]);
   return (
-    <section>
+    <section className="text-text">
       <strong>Date of birth</strong>
       <div className="flex flex-row gap-2">
         <div className="border border-text p-1 rounded-md w-full">
@@ -63,11 +63,11 @@ const DobSelectList = ({ year, month, setYear, setMonth, setDay }: YMD) => {
             }}
           >
             <p>Year</p>
-            <IconCaretDownFilled />
+            <IconCaretDownFilled color="#cdd6f4" />
           </div>
           <select
             ref={yearRef}
-            className="bg-t w-full outline-t appearance-none"
+            className="bg-t w-full outline-t appearance-none "
             onChange={(e) => {
               handleYMDChange(Number(e.target.value), setYear);
             }}
@@ -90,11 +90,11 @@ const DobSelectList = ({ year, month, setYear, setMonth, setDay }: YMD) => {
             }}
           >
             <p>Month</p>
-            <IconCaretDownFilled />
+            <IconCaretDownFilled color="#cdd6f4" />
           </div>
           <select
             ref={monthRef}
-            className="bg-t w-full outline-t appearance-none"
+            className="bg-t w-full outline-t appearance-none "
             onChange={(e) => {
               handleYMDChange(Number(e.target.value), setMonth);
             }}
@@ -114,11 +114,11 @@ const DobSelectList = ({ year, month, setYear, setMonth, setDay }: YMD) => {
             }}
           >
             <p>Day</p>
-            <IconCaretDownFilled />
+            <IconCaretDownFilled color="#cdd6f4" />
           </div>
           <select
             ref={dayRef}
-            className="bg-t w-full outline-t appearance-none"
+            className="bg-t w-full outline-t appearance-none "
             onChange={(e) => {
               handleYMDChange(Number(e.target.value), setDay);
             }}

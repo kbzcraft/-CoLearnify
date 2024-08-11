@@ -1,19 +1,27 @@
-import React from "react";
+"use client";
+import React, { useRef } from "react";
 import ButtonMd from "./buttonMd";
 import { IconBrandGithub, IconBrandGoogle } from "@tabler/icons-react";
 import Link from "next/link";
+import Register from "./register";
 
 const AuthOption = () => {
+  const registerRef = useRef<HTMLDialogElement>(null);
+  const registerFn = () => {
+    console.log("hello");
+  };
+
   return (
     <main>
+      <Register refObj={registerRef} />
       <section className="flex flex-col gap-2">
         <ButtonMd
-          icon={<IconBrandGoogle />}
+          icon={<IconBrandGoogle color="#a6e3a1" />}
           value="Sign in with google"
           classname="bg-surface2"
         />
         <ButtonMd
-          icon={<IconBrandGithub />}
+          icon={<IconBrandGithub color="#11111b" />}
           value="Sign in with github"
           classname="bg-surface2"
         />
@@ -39,7 +47,11 @@ const AuthOption = () => {
           Use.
         </p>
         <strong> Already have an account ?</strong>
-        <ButtonMd value="Sign in" classname="text-blue border-text" />
+        <ButtonMd
+          value="Sign in"
+          classname="text-blue border-text"
+          fn={registerFn}
+        />
       </section>
     </main>
   );
