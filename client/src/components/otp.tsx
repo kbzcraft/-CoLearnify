@@ -1,8 +1,11 @@
 "use client";
-import { useRef } from "react";
+import React, { useRef } from "react";
 import BtnSm from "./buttonSm";
 
-const OTP = () => {
+interface Props {
+  onClickFn?: VoidFunction;
+}
+const OTP: React.FC<Props> = ({ onClickFn }) => {
   const inputRef = [
     useRef<HTMLInputElement>(null),
     useRef<HTMLInputElement>(null),
@@ -28,7 +31,7 @@ const OTP = () => {
           {inputRef.map((ref, i) => (
             <input
               required
-                key={i}
+              key={i}
               ref={ref}
               onChange={handleChange(i + 1)}
               type="number"
@@ -41,7 +44,7 @@ const OTP = () => {
         </div>
       </div>
       <div className="@container flex justify-end w-full">
-        <BtnSm value="Verify" />
+        <BtnSm value="Verify" onClickFn={onClickFn} />
       </div>
     </form>
   );

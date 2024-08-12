@@ -1,29 +1,40 @@
 "use client";
 import Input from "@/components/input";
-import { useState } from "react";
+import { Dispatch, SetStateAction, useContext } from "react";
 import DobSelectList from "./dobSelectList";
 import BtnSm from "./buttonSm";
+import UserContext from "@/contexts/userContext";
 
-const CreateAccount = () => {
-  const [value, setValue] = useState("");
-  const [password, setPassword] = useState("");
-  const [day, setDay] = useState(29);
-  const [month, SetMonth] = useState(1);
-  const [year, setYear] = useState(2014);
+interface Props {
+  onClickFn?: VoidFunction;
+}
+
+const CreateAccount: React.FC<Props> = ({ onClickFn }) => {
+  const {
+    userName,
+    setUserName,
+    email,
+    setEmail,
+    year,
+    setYear,
+    month,
+    setMonth,
+    setDay,
+  } = useContext(UserContext);
   return (
     <form className="flex flex-col gap-4">
       <strong className="text-text">Create your account</strong>
-      <Input label="username" value={password} setValue={setPassword} />
-      <Input label="Email" value={value} setValue={setValue} />
+      <Input label="username" value={userName} setValue={setUserName} />
+      <Input label="Email" value={email} setValue={setEmail} />
       <DobSelectList
         month={month}
         year={year}
         setDay={setDay}
-        setMonth={SetMonth}
+        setMonth={setMonth}
         setYear={setYear}
       />
       <div className="@container flex justify-end w-full">
-        <BtnSm />
+        <BtnSm onClickFn={onClickFn} />
       </div>
     </form>
   );

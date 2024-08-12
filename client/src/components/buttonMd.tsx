@@ -9,12 +9,10 @@ const ButtonMd: React.FC<btnProps> = ({
   icon,
   value = "Create account",
   classname,
-  fn = () => {
-    console.log("hello wolf");
-  },
+  fn = () => { },
 }) => {
   classname =
-    " flex border border-blue rounded-2xl p-2 w-full justify-center gap-1 text-text " +
+    " flex border border-blue rounded-2xl p-2 w-full justify-center gap-1 " +
     classname;
 
   return (

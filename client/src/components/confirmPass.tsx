@@ -1,11 +1,26 @@
 "use client";
 import Input from "@/components/input";
-import { useState } from "react";
+import { Dispatch, SetStateAction, useContext, useState } from "react";
 import BtnSm from "./buttonSm";
+import UserContext from "@/contexts/userContext";
 
-const ConfirmPassword = () => {
-  const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
+interface Props {
+  onClickFn?: VoidFunction;
+  // password: string;
+  // setPassword: Dispatch<SetStateAction<string>>;
+  // confirmPassword: string;
+  // setConfirmPassword: Dispatch<SetStateAction<string>>;
+}
+const ConfirmPassword: React.FC<Props> = ({ onClickFn }) => {
+  const {password,setPassword} = useContext(UserContext) 
+  const [confirmPassword, setConfirmPassword] = useState<string>("");
+  /* const handlePass = () => {
+    if (password === confirmPassword) {
+      onClickFn()
+    } else {
+      console.log("password did not match");
+    }
+  }; */
   return (
     <form className="flex flex-col gap-4">
       <strong className="text-text">Set your password.</strong>
@@ -22,7 +37,7 @@ const ConfirmPassword = () => {
         setValue={setConfirmPassword}
       />
       <div className="@container flex justify-end w-full">
-        <BtnSm value="Confirm" />
+        <BtnSm value="Confirm" onClickFn={onClickFn} />
       </div>
     </form>
   );

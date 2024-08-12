@@ -3,17 +3,13 @@ import React, { useRef } from "react";
 import ButtonMd from "./buttonMd";
 import { IconBrandGithub, IconBrandGoogle } from "@tabler/icons-react";
 import Link from "next/link";
-import Register from "./register";
+interface Props {
+  onCreateAccount: VoidFunction;
+}
 
-const AuthOption = () => {
-  const registerRef = useRef<HTMLDialogElement>(null);
-  const registerFn = () => {
-    console.log("hello");
-  };
-
+const AuthOption: React.FC<Props> = ({ onCreateAccount }) => {
   return (
     <main>
-      <Register refObj={registerRef} />
       <section className="flex flex-col gap-2">
         <ButtonMd
           icon={<IconBrandGoogle color="#a6e3a1" />}
@@ -30,7 +26,7 @@ const AuthOption = () => {
           <span>or</span>
           <span className="bg-text grow h-[1px]"></span>
         </div>
-        <ButtonMd classname="bg-blue text-base" />
+        <ButtonMd classname="bg-blue text-base" fn={onCreateAccount} />
         <p className="text-sm cursor-default my-1">
           By signing up, you agree to the{" "}
           <a className="text-blue" href="https://tos.learnify.co">
@@ -47,11 +43,7 @@ const AuthOption = () => {
           Use.
         </p>
         <strong> Already have an account ?</strong>
-        <ButtonMd
-          value="Sign in"
-          classname="text-blue border-text"
-          fn={registerFn}
-        />
+        <ButtonMd value="Sign in" classname="text-blue border-text" />
       </section>
     </main>
   );
