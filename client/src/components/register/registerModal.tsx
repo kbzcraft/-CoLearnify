@@ -1,11 +1,11 @@
 "use client";
 
 import { IconX } from "@tabler/icons-react";
-import CoLearnify from "../../public/logo";
 import CreateAccount from "./createAccount";
 import ConfirmPassword from "./confirmPass";
 import OTP from "./otp";
-import { Dispatch, SetStateAction, useState } from "react";
+import { useState } from "react";
+import CoLearnify from "../../../public/logo";
 
 interface Props {
   // userName: string;

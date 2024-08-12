@@ -1,6 +1,6 @@
 "use client";
 import React, { useRef } from "react";
-import BtnSm from "./buttonSm";
+import BtnSm from "@/components/buttonSm";
 
 interface Props {
   onClickFn?: VoidFunction;

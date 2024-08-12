@@ -1,11 +1,11 @@
 // import AuthForm from "@/components/auth";
 "use client";
 import UserContextProvider from "@/contexts/userContextProvider";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import AuthOption from "@/components/authOptions";
 // import Image from "next/image";
 import CoLearnify from "@/../public/logo";
-import RegisterModal from "@/components/register";
+import RegisterModal from "@/components/register/registerModal";
 // import logo from "@/../public/learnify.png";
 const AuthPage = () => {
   const dialogRef = useRef<HTMLDialogElement>(null);

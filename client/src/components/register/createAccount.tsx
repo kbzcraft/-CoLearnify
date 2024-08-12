@@ -1,8 +1,8 @@
 "use client";
 import Input from "@/components/input";
-import { Dispatch, SetStateAction, useContext } from "react";
-import DobSelectList from "./dobSelectList";
-import BtnSm from "./buttonSm";
+import { useContext } from "react";
+import DobSelectList from "@/components/dobSelectList";
+import BtnSm from "@/components/buttonSm";
 import UserContext from "@/contexts/userContext";
 
 interface Props {

@@ -1,7 +1,7 @@
 "use client";
 import Input from "@/components/input";
-import { Dispatch, SetStateAction, useContext, useState } from "react";
-import BtnSm from "./buttonSm";
+import { useContext, useState } from "react";
+import BtnSm from "@/components/buttonSm";
 import UserContext from "@/contexts/userContext";
 
 interface Props {
@@ -12,7 +12,7 @@ interface Props {
   // setConfirmPassword: Dispatch<SetStateAction<string>>;
 }
 const ConfirmPassword: React.FC<Props> = ({ onClickFn }) => {
-  const {password,setPassword} = useContext(UserContext) 
+  const { password, setPassword } = useContext(UserContext);
   const [confirmPassword, setConfirmPassword] = useState<string>("");
   /* const handlePass = () => {
     if (password === confirmPassword) {
