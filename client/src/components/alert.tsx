@@ -8,36 +8,33 @@ interface AlertProps {
   setShowAlert: Dispatch<SetStateAction<boolean>>;
   showAlert: boolean;
 }
-
 const Alert: React.FC<AlertProps> = ({
   alertMsg = "Something went wrong",
   status = "error",
   setShowAlert,
   showAlert,
 }) => {
+  useEffect(() => {
+    if(showAlert){
+    //debugger
+    const timer = setTimeout(() => {
+      //debugger
+      setShowAlert(false);
+    }, 5000);
+    return () => clearTimeout(timer);
+  }
+  }, []);
   const bg =
     status === "success"
       ? "bg-green"
       : status === "error"
         ? "bg-red"
         : "bg-yellow";
-
-  // Combine classes into classname
-  const classname = `absolute right-1 top-12 sm:top-2 min-h-10 max-w-sm w-full rounded-sm flex items-center justify-between text-text font-medium ${bg}`;
-
-  useEffect(() => {
-    // Set timer to hide alert after 5 seconds
-    const timer = setTimeout(() => {
-      setShowAlert(false);
-    }, 5000);
-
-    // Cleanup timer on unmount
-    return () => clearTimeout(timer);
-  }, [setShowAlert]); // Ensure setShowAlert is in dependencies array
-
   return (
     showAlert && (
-      <div className={classname}>
+      <div
+        className={`absolute right-1 top-12 sm:top-2 min-h-10 max-w-sm w-full rounded-sm flex items-center justify-between text-text font-medium ${bg}`}
+      >
         {alertMsg}
         <div className="h-full relative">
           <button
