@@ -4,9 +4,10 @@ import { IconBrandGithub, IconBrandGoogle } from "@tabler/icons-react";
 import Link from "next/link";
 interface Props {
   onCreateAccount: VoidFunction;
+  onSignIn: VoidFunction;
 }
 
-const AuthOption: React.FC<Props> = ({ onCreateAccount }) => {
+const AuthOption: React.FC<Props> = ({ onCreateAccount, onSignIn }) => {
   return (
     <main>
       <section className="flex flex-col gap-2">
@@ -25,7 +26,7 @@ const AuthOption: React.FC<Props> = ({ onCreateAccount }) => {
           <span>or</span>
           <span className="bg-text grow h-[1px]"></span>
         </div>
-        <ButtonMd classname="bg-blue text-base" fn={onCreateAccount} />
+        <ButtonMd classname="bg-blue text-base" onClick={onCreateAccount} />
         <p className="text-sm cursor-default my-1">
           By signing up, you agree to the{" "}
           <a className="text-blue" href="https://tos.learnify.co">
@@ -42,7 +43,11 @@ const AuthOption: React.FC<Props> = ({ onCreateAccount }) => {
           Use.
         </p>
         <strong> Already have an account ?</strong>
-        <ButtonMd value="Sign in" classname="text-blue border-text" />
+        <ButtonMd
+          value="Sign in"
+          classname="text-blue border-text"
+          onClick={onSignIn}
+        />
       </section>
     </main>
   );

@@ -8,14 +8,6 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    colors: {
-      base: "#1e1e2e",
-      blue: "#89b4fa",
-      text: "#cdd6f4",
-      crust: "#11111b",
-      surface2: "#585b70",
-      t: "#00000000",
-    },
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -25,6 +17,15 @@ const config: Config = {
       fontFamily: {
         lexend: ["var(--font-lexend)"],
         zetta: ["var(--font-zetta)"],
+      },
+      colors: {
+        base: "#1e1e2e",
+        blue: "#89b4fa",
+        text: "#cdd6f4",
+        crust: "#11111b",
+        surface2: "#585b70",
+        t: "#00000000",
+        red: "#f38ba8",
       },
     },
   },

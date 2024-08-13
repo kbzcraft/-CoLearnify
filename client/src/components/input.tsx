@@ -6,6 +6,7 @@ interface InputProps {
   value: string;
   setValue: Dispatch<SetStateAction<string>>;
   radius?: string;
+  error?: string;
 }
 
 const Input: React.FC<InputProps> = ({
@@ -14,6 +15,7 @@ const Input: React.FC<InputProps> = ({
   value,
   setValue,
   radius = "10px",
+  error,
 }) => {
   const handelChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setValue(e.target.value);
@@ -24,9 +26,11 @@ const Input: React.FC<InputProps> = ({
       className={`flex flex-col border border-text relative min-h-12 focus-within:border-blue text-text`}
     >
       <input
+        autoComplete="off"
         onChange={handelChange}
         type={type}
         value={value}
+        name={label}
         className="bg-[transparent] outline-none px-3 pt-1 peer absolute inset-0"
       />
       <p
@@ -38,6 +42,11 @@ const Input: React.FC<InputProps> = ({
       >
         {label}
       </p>
+      {error != "" && (
+        <p className="absolute bottom-0 translate-y-5 text-red text-sm">
+          {error}
+        </p>
+      )}
     </label>
   );
 };

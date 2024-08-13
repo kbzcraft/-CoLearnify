@@ -8,16 +8,6 @@ import { useState } from "react";
 import CoLearnify from "../../../public/logo";
 
 interface Props {
-  // userName: string;
-  // setUserName: Dispatch<SetStateAction<string>>;
-  // email: string;
-  // setEmail: Dispatch<SetStateAction<string>>;
-  // // day?: number;
-  // setDay: Dispatch<SetStateAction<number>>;
-  // month: number;
-  // setMonth: Dispatch<SetStateAction<number>>;
-  // year: number;
-  // setYear: Dispatch<SetStateAction<number>>;
   onClickFn?: VoidFunction;
   handleClose: VoidFunction;
 }

@@ -66,6 +66,7 @@ const DobSelectList = ({ year, month, setYear, setMonth, setDay }: YMD) => {
             <IconCaretDownFilled color="#cdd6f4" />
           </div>
           <select
+            name="year"
             ref={yearRef}
             className="bg-t w-full outline-t appearance-none "
             onChange={(e) => {
@@ -93,6 +94,7 @@ const DobSelectList = ({ year, month, setYear, setMonth, setDay }: YMD) => {
             <IconCaretDownFilled color="#cdd6f4" />
           </div>
           <select
+            name="month"
             ref={monthRef}
             className="bg-t w-full outline-t appearance-none "
             onChange={(e) => {
@@ -117,6 +119,7 @@ const DobSelectList = ({ year, month, setYear, setMonth, setDay }: YMD) => {
             <IconCaretDownFilled color="#cdd6f4" />
           </div>
           <select
+            name="day"
             ref={dayRef}
             className="bg-t w-full outline-t appearance-none "
             onChange={(e) => {

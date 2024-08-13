@@ -1,23 +1,45 @@
 // import AuthForm from "@/components/auth";
 "use client";
 import UserContextProvider from "@/contexts/userContextProvider";
-import { useRef } from "react";
+import { RefObject, useRef } from "react";
 import AuthOption from "@/components/authOptions";
 // import Image from "next/image";
 import CoLearnify from "@/../public/logo";
 import RegisterModal from "@/components/register/registerModal";
+import LoginModal from "@/components/login/loginModal";
 // import logo from "@/../public/learnify.png";
 const AuthPage = () => {
-  const dialogRef = useRef<HTMLDialogElement>(null);
+  const registerRef = useRef<HTMLDialogElement>(null);
+  const loginRef = useRef<HTMLDialogElement>(null);
 
-  const handleShow = () => {
-    if (dialogRef.current) {
-      dialogRef.current.showModal();
+  /* const handleShow = (ref: RefObject<HTMLDialogElement>) => {
+    if (ref.current) {
+      ref.current.showModal();
     }
   };
-  const handleClose = () => {
-    if (dialogRef.current) {
-      dialogRef.current.close();
+  const handleClose = (ref: RefObject<HTMLDialogElement>) => {
+    if (ref.current) {
+      ref.current.close();
+    }
+  }; */
+  const handleRegisterShow = () => {
+    if (registerRef.current) {
+      registerRef.current.showModal();
+    }
+  };
+  const handleRegisterClose = () => {
+    if (registerRef.current) {
+      registerRef.current.close();
+    }
+  };
+  const handleLoginShow = () => {
+    if (loginRef.current) {
+      loginRef.current.showModal();
+    }
+  };
+  const handleLoginClose = () => {
+    if (loginRef.current) {
+      loginRef.current.close();
     }
   };
   return (
@@ -37,16 +59,25 @@ const AuthPage = () => {
               Start today
             </h3>
             <div className="max-w-lg">
-              <AuthOption onCreateAccount={handleShow} />
+              <AuthOption
+                onCreateAccount={handleRegisterShow}
+                onSignIn={handleLoginShow}
+              />
             </div>
           </div>
         </section>
       </main>
       <dialog
-        ref={dialogRef}
+        ref={registerRef}
         className="bg-crust border-none outline-t rounded-md p-4 max-w-lg w-full"
       >
-        <RegisterModal handleClose={handleClose} />
+        <RegisterModal handleClose={handleRegisterClose} />
+      </dialog>
+      <dialog
+        ref={loginRef}
+        className="bg-crust border-none outline-t rounded-md p-4 max-w-lg w-full"
+      >
+        <LoginModal handleClose={handleLoginClose} />
       </dialog>
     </UserContextProvider>
   );

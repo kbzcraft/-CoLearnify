@@ -14,13 +14,28 @@ interface Props {
 const ConfirmPassword: React.FC<Props> = ({ onClickFn }) => {
   const { password, setPassword } = useContext(UserContext);
   const [confirmPassword, setConfirmPassword] = useState<string>("");
-  /* const handlePass = () => {
-    if (password === confirmPassword) {
-      onClickFn()
-    } else {
-      console.log("password did not match");
+  const [passErr, setPassErr] = useState<string>("");
+  const handlePass = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    if (password.length === 0) {
+      setPassErr("*required");
+      return;
     }
-  }; */
+    if (confirmPassword.includes(" ")) {
+      setPassErr("white space not allowed");
+      return;
+    }
+    if (password.length < 8) {
+      setPassErr("password must be 8 char long");
+      return;
+    }
+    if (password === confirmPassword) {
+      setPassErr("");
+      if (onClickFn) onClickFn();
+    } else {
+      setPassErr("password must be same.");
+    }
+  };
   return (
     <form className="flex flex-col gap-4">
       <strong className="text-text">Set your password.</strong>
@@ -29,6 +44,7 @@ const ConfirmPassword: React.FC<Props> = ({ onClickFn }) => {
         type="password"
         value={password}
         setValue={setPassword}
+        error={passErr}
       />
       <Input
         label="confirm password"
@@ -37,7 +53,10 @@ const ConfirmPassword: React.FC<Props> = ({ onClickFn }) => {
         setValue={setConfirmPassword}
       />
       <div className="@container flex justify-end w-full">
-        <BtnSm value="Confirm" onClickFn={onClickFn} />
+        <BtnSm
+          value="Confirm"
+          onClick={(e: React.MouseEvent<HTMLButtonElement>) => handlePass(e)}
+        />
       </div>
     </form>
   );
