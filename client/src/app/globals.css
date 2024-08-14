@@ -20,4 +20,14 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
-/* alert animation */
+/* tabs */
+
+.no-visible-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.no-visible-scrollbar::-webkit-scrollbar {
+  display: none;
+}
