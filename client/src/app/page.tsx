@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Tabs from "@/components/tabs";
 import Navbar from "@/components/navbar/navbar";
+import HomeContent from "@/components/contentBox/home";
 
 const Home = () => {
   interface Itab {
@@ -11,29 +12,24 @@ const Home = () => {
     content?: string | React.ReactNode | any;
   }
   const [tabs, setTabs] = useState<Itab[]>([
-    { title: "Home", value: "Hometab", content: "content", isActive: true },
+    {
+      title: "Home",
+      value: "Hometab",
+      content: <HomeContent />,
+      isActive: true,
+    },
   ]);
   return (
     <main className="md:flex w-full h-full">
       <Navbar />
       <section className="grow">
         <Tabs tabs={tabs} setTabs={setTabs} />
-        <div className="">
-          {" "}
-          content|kljadksjf asdkfj;k ak
-          <br />
-          content|kljadksjf asdkfj;k ak
-          <br />
-          content|kljadksjf asdkfj;k ak
-          <br />
-          ccccontent|kljadksjf asdkfj;k ak
-          <br />
-          ontent|kljadksjf asdkfj;k ak
-          <br />
-          ontent|kljadksjf asdkfj;k ak
-          <br />
-          ontent|kljadksjf asdkfj;k ak
-          <br />
+        <div className="p-2">
+          {tabs
+            .filter((tab) => tab.isActive)
+            .map((tab) => (
+              <section key="activeTab">{tab.content}</section>
+            ))}
         </div>
       </section>
     </main>

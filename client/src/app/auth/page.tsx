@@ -12,16 +12,6 @@ const AuthPage = () => {
   const registerRef = useRef<HTMLDialogElement>(null);
   const loginRef = useRef<HTMLDialogElement>(null);
 
-  /* const handleShow = (ref: RefObject<HTMLDialogElement>) => {
-    if (ref.current) {
-      ref.current.showModal();
-    }
-  };
-  const handleClose = (ref: RefObject<HTMLDialogElement>) => {
-    if (ref.current) {
-      ref.current.close();
-    }
-  }; */
   const handleRegisterShow = () => {
     if (registerRef.current) {
       registerRef.current.showModal();
